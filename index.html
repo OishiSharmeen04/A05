@@ -1,311 +1,599 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.css" rel="stylesheet" type="text/css" />
-  <link rel="icon" type="image/x-icon" href="assets/logo.png">
-  <title>Joruri seba</title>
-</head>
-<body class="bg-base-200">
-    <header class="navbar bg-base-100 shadow-md px-4 sm:px-6 md:px-10 py-3 sm:py-4 md:py-5">
-        <!-- navbar -->
-
-            <div class="flex-1 flex items-center gap-2 mb-2 sm:mb-0">
-                <img src="assets/logo.png" class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14"/>
-                <span class="text-[#006747] font-extrabold text-base sm:text-lg md:text-xl leading-tight">Emergency<br>Service</span>
-            </div>
-
-             <div class="flex gap-2 sm:gap-3 items-center">
-                <button class="btn rounded-full text-sm sm:text-base md:text-lg px-3 sm:px-4 md:px-5"><span id="heartCount">0</span><img src="assets/heart.png" alt="" class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"></button>
-                <button class="btn rounded-full text-sm sm:text-base md:text-lg px-3 sm:px-4 md:px-5"><span id="coinCount">100</span><img src="assets/coin.png" alt="" class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"></button>
-                <button class="btn bg-[#00A63E] text-white rounded-full text-sm sm:text-base md:text-lg px-3 sm:px-4 md:px-5"><span id="copyCount">0</span>Copy</button>
-            </div>
-
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="assets/logo.png">
+    <title>Joruri seba</title>
+  </head>
+  <body class="bg-base-200">
+    <header class="navbar bg-base-100 shadow-md flex justify-between items-center px-2 py-2">
+      <!-- navbar -->
+      <div class="flex items-center gap-1">
+        <img src="assets/logo.png" class="w-7 h-7 sm:w-10 sm:h-10 md:w-14 md:h-14">
+        <span class="text-[#006747] font-extrabold text-sm sm:text-lg md:text-xl leading-tight">Emergency<br>Service</span>
+      </div>
+      <div class="flex gap-1 sm:gap-2 items-center">
+        <button class="btn btn-xs sm:btn-sm md:btn-md rounded-full px-2 sm:px-3 md:px-5">
+          <span id="heartCount">0</span>
+          <img src="assets/heart.png" class="w-3 h-3 sm:w-5 sm:h-5 md:w-6 md:h-6">
+        </button>
+        <button class="btn btn-xs sm:btn-sm md:btn-md rounded-full px-2 sm:px-3 md:px-5">
+          <span id="coinCount">100</span>
+          <img src="assets/coin.png" class="w-3 h-3 sm:w-5 sm:h-5 md:w-6 md:h-6">
+        </button>
+        <button class="btn btn-xs sm:btn-sm md:btn-md bg-[#00A63E] text-white rounded-full px-2 sm:px-3 md:px-5">
+          <span id="copyCount">0</span> Copy
+        </button>
+      </div>
     </header>
 
-        <!-- banner -->
+    <!-- banner -->
 
-            <section class="bg-gradient-to-r from-green-900 via-green-800 to-green-900 text-white text-center py-8 sm:py-10 md:py-16 px-4">
-                <img src="assets/logo-dark.png" class="mx-auto mb-4 w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16"/>
-                <h1 class="text-3xl font-bold">Emergency Service Directory</h1>
-                <p class="mt-4 text-lg">Government Emergency Services at Your Fingertip – A Project by Government of the People’s Republic of Bangladesh</p>
-            </section>
+    <section class="bg-gradient-to-r from-green-900 via-green-800 to-green-900 text-white text-center py-8 sm:py-10 md:py-16 px-4">
+      <img src="assets/logo-dark.png" class="mx-auto mb-4 w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16">
+      <h1 class="text-3xl font-bold">Emergency Service Directory</h1>
+      <p class="mt-4 text-lg">Government Emergency Services at Your Fingertip – A Project by
+        Government of the People’s Republic of Bangladesh</p>
+    </section>
 
-    <!-- main section -->
+    <!-- card section -->
 
-    <section class="grid grid-cols-1 md:grid-cols-12 gap-6 p-6">
-            <!-- card -->
-        <div class="md:col-span-9 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        <!-- card container -->
-         <!-- card-1 -->
+    <main class="grid grid-cols-1 md:grid-cols-12 gap-6 p-6">
+    
+      <div class="md:col-span-9 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- cards container -->
+        <!-- card-1 -->
         <div class="card bg-base-100 shadow-xl p-8">
-            <div class="flex justify-between items-center">
-                <div class="bg-[#FFE3E2] rounded flex items-center justify-center p-2 sm:p-3 md:p-4">
-                    <img src="assets/emergency.png" class="w-8 h-8 sm:w-5 sm:h-5 md:w-6 md:h-6" alt="">
-                </div>
-            <img src="assets/heart2.png" alt="" class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 heartBtn cursor-pointer select-none">
-        </div>
-        <h2 class="font-semibold mt-2 text-base sm:text-lg">National Emergency Number</h2>
-        <h3 class="text-base sm:text-lg text-gray-500">National Emergency</h3>
-        <p class="font-semibold mt-2 text-base sm:text-3xl">999</p>
-        <div class="badge bg-base-300 p-4 my-5 text-sm sm:text-base text-gray-500">All</div>
+          <div class="flex justify-between items-center">
+            <div class="bg-[#FFE3E2] rounded flex items-center justify-center p-2 sm:p-3 md:p-4">
+              <img src="assets/emergency.png" class="w-8 h-8 sm:w-5 sm:h-5 md:w-6 md:h-6">
+            </div>
+            <img src="assets/heart2.png" class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 heartBtn cursor-pointer select-none">
+          </div>
+          <h2 class="font-semibold mt-2 text-base sm:text-lg">National Emergency Number</h2>
+          <h3 class="text-base sm:text-lg text-gray-500">National Emergency</h3>
+          <p class="font-semibold mt-2 text-base sm:text-3xl">999</p>
+          <div class="badge bg-base-300 p-4 my-5 text-sm sm:text-base text-gray-500">All</div>
 
-        <div class="mt-3 flex flex-col sm:flex-row gap-2">
-            <button class="flex items-center justify-center gap-2 bg-white hover:bg-blue-100 border border-[#D4D6D5] text-gray-600 copyBtn py-2 px-2 rounded w-full" data-number="999">
-                <img src="assets/paste.png" alt="" class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6">Copy</button>
-            <button class="flex items-center justify-center gap-2 bg-[#00A63E] hover:bg-green-500 border border-[#D4D6D5] text-white callBtn py-2 px-2 rounded w-full" data-name="National Emergency Number" data-number="999">
-                <img src="assets/telephone.png" alt="" class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6">Call</button>
-        </div>
-
+          <div class="mt-3 flex flex-col sm:flex-row gap-2">
+            <button
+              class="flex items-center justify-center gap-2 bg-white hover:bg-blue-100 border border-[#D4D6D5] text-gray-600 copyBtn py-2 px-2 rounded w-full"
+              data-number="999"
+            >
+              <img
+                src="assets/paste.png"
+                alt=""
+                class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
+              />Copy
+            </button>
+            <button
+              class="flex items-center justify-center gap-2 bg-[#00A63E] hover:bg-green-500 border border-[#D4D6D5] text-white callBtn py-2 px-2 rounded w-full"
+              data-name="National Emergency Number"
+              data-number="999"
+            >
+              <img
+                src="assets/telephone.png"
+                alt=""
+                class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
+              />Call
+            </button>
+          </div>
         </div>
 
         <!-- card-2 -->
         <div class="card bg-base-100 shadow-xl p-8">
-            <div class="flex justify-between items-center">
-                <div class="bg-[#DFEFFF] rounded flex items-center justify-center p-2 sm:p-3 md:p-4">
-                    <img src="assets/police.png" class="w-8 h-8 sm:w-5 sm:h-5 md:w-6 md:h-6" alt="">
-                </div>
-            <img src="assets/heart2.png" alt="" class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 heartBtn cursor-pointer select-none">
-        </div>
-        <h2 class="font-semibold mt-2 text-base sm:text-lg">Police Helpline Number</h2>
-        <h3 class="text-base sm:text-lg text-gray-500">Police</h3>
-        <p class="font-semibold mt-2 text-base sm:text-3xl">999</p>
-        <div class="badge bg-base-300 p-4 my-5 text-sm sm:text-base text-gray-500">Police</div>
+          <div class="flex justify-between items-center">
+            <div
+              class="bg-[#DFEFFF] rounded flex items-center justify-center p-2 sm:p-3 md:p-4"
+            >
+              <img
+                src="assets/police.png"
+                class="w-8 h-8 sm:w-5 sm:h-5 md:w-6 md:h-6"
+                alt=""
+              />
+            </div>
+            <img
+              src="assets/heart2.png"
+              alt=""
+              class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 heartBtn cursor-pointer select-none"
+            />
+          </div>
+          <h2 class="font-semibold mt-2 text-base sm:text-lg">
+            Police Helpline Number
+          </h2>
+          <h3 class="text-base sm:text-lg text-gray-500">Police</h3>
+          <p class="font-semibold mt-2 text-base sm:text-3xl">999</p>
+          <div
+            class="badge bg-base-300 p-4 my-5 text-sm sm:text-base text-gray-500"
+          >
+            Police
+          </div>
 
-        <div class="mt-3 flex flex-col sm:flex-row gap-2">
-            <button class="flex items-center justify-center gap-2 bg-white hover:bg-blue-100 border border-[#D4D6D5] text-gray-600 copyBtn py-2 px-2 rounded w-full" data-number="999">
-                <img src="assets/paste.png" alt="" class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6">Copy</button>
-            <button class="flex items-center justify-center gap-2 bg-[#00A63E] hover:bg-green-500 border border-[#D4D6D5] text-white callBtn py-2 px-2 rounded w-full" data-name="Police Helpline Number" data-number="999">
-                <img src="assets/telephone.png" alt="" class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6">Call</button>
-        </div>
-
+          <div class="mt-3 flex flex-col sm:flex-row gap-2">
+            <button
+              class="flex items-center justify-center gap-2 bg-white hover:bg-blue-100 border border-[#D4D6D5] text-gray-600 copyBtn py-2 px-2 rounded w-full"
+              data-number="999"
+            >
+              <img
+                src="assets/paste.png"
+                alt=""
+                class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
+              />Copy
+            </button>
+            <button
+              class="flex items-center justify-center gap-2 bg-[#00A63E] hover:bg-green-500 border border-[#D4D6D5] text-white callBtn py-2 px-2 rounded w-full"
+              data-name="Police Helpline Number"
+              data-number="999"
+            >
+              <img
+                src="assets/telephone.png"
+                alt=""
+                class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
+              />Call
+            </button>
+          </div>
         </div>
 
         <!-- card-3 -->
         <div class="card bg-base-100 shadow-xl p-8">
-            <div class="flex justify-between items-center">
-                <div class="bg-[#FFE3E2] rounded flex items-center justify-center p-2 sm:p-3 md:p-4">
-                    <img src="assets/fire-service.png" class="w-8 h-8 sm:w-5 sm:h-5 md:w-6 md:h-6" alt="">
-                </div>
-            <img src="assets/heart2.png" alt="" class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 heartBtn cursor-pointer select-none">
-        </div>
-        <h2 class="font-semibold mt-2 text-base sm:text-lg">Fire Service Number</h2>
-        <h3 class="text-base sm:text-lg text-gray-500">Fire Service</h3>
-        <p class="font-semibold mt-2 text-base sm:text-3xl">999</p>
-        <div class="badge bg-base-300 p-4 my-5 text-sm sm:text-base text-gray-500">Fire</div>
+          <div class="flex justify-between items-center">
+            <div
+              class="bg-[#FFE3E2] rounded flex items-center justify-center p-2 sm:p-3 md:p-4"
+            >
+              <img
+                src="assets/fire-service.png"
+                class="w-8 h-8 sm:w-5 sm:h-5 md:w-6 md:h-6"
+                alt=""
+              />
+            </div>
+            <img
+              src="assets/heart2.png"
+              alt=""
+              class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 heartBtn cursor-pointer select-none"
+            />
+          </div>
+          <h2 class="font-semibold mt-2 text-base sm:text-lg">
+            Fire Service Number
+          </h2>
+          <h3 class="text-base sm:text-lg text-gray-500">Fire Service</h3>
+          <p class="font-semibold mt-2 text-base sm:text-3xl">999</p>
+          <div
+            class="badge bg-base-300 p-4 my-5 text-sm sm:text-base text-gray-500"
+          >
+            Fire
+          </div>
 
-        <div class="mt-3 flex flex-col sm:flex-row gap-2">
-            <button class="flex items-center justify-center gap-2 bg-white hover:bg-blue-100 border border-[#D4D6D5] text-gray-600 copyBtn py-2 px-2 rounded w-full" data-number="999">
-                <img src="assets/paste.png" alt="" class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6">Copy</button>
-            <button class="flex items-center justify-center gap-2 bg-[#00A63E] hover:bg-green-500 border border-[#D4D6D5] text-white callBtn py-2 px-2 rounded w-full" data-name="Fire Service Number" data-number="999">
-                <img src="assets/telephone.png" alt="" class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6">Call</button>
-        </div>
-
+          <div class="mt-3 flex flex-col sm:flex-row gap-2">
+            <button
+              class="flex items-center justify-center gap-2 bg-white hover:bg-blue-100 border border-[#D4D6D5] text-gray-600 copyBtn py-2 px-2 rounded w-full"
+              data-number="999"
+            >
+              <img
+                src="assets/paste.png"
+                alt=""
+                class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
+              />Copy
+            </button>
+            <button
+              class="flex items-center justify-center gap-2 bg-[#00A63E] hover:bg-green-500 border border-[#D4D6D5] text-white callBtn py-2 px-2 rounded w-full"
+              data-name="Fire Service Number"
+              data-number="999"
+            >
+              <img
+                src="assets/telephone.png"
+                alt=""
+                class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
+              />Call
+            </button>
+          </div>
         </div>
 
         <!-- card-4 -->
         <div class="card bg-base-100 shadow-xl p-8">
-            <div class="flex justify-between items-center">
-                <div class="bg-[#DFEFFF] rounded flex items-center justify-center p-2 sm:p-3 md:p-4">
-                    <img src="assets/ambulance.png" class="w-8 h-8 sm:w-5 sm:h-5 md:w-6 md:h-6" alt="">
-                </div>
-            <img src="assets/heart2.png" alt="" class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 heartBtn cursor-pointer select-none">
-        </div>
-        <h2 class="font-semibold mt-2 text-base sm:text-lg">Ambulance Service</h2>
-        <h3 class="text-base sm:text-lg text-gray-500">Ambulance</h3>
-        <p class="font-semibold mt-2 text-base sm:text-3xl">1994-999999</p>
-        <div class="badge bg-base-300 p-4 my-5 text-sm sm:text-base text-gray-500">Health</div>
+          <div class="flex justify-between items-center">
+            <div
+              class="bg-[#DFEFFF] rounded flex items-center justify-center p-2 sm:p-3 md:p-4"
+            >
+              <img
+                src="assets/ambulance.png"
+                class="w-8 h-8 sm:w-5 sm:h-5 md:w-6 md:h-6"
+                alt=""
+              />
+            </div>
+            <img
+              src="assets/heart2.png"
+              alt=""
+              class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 heartBtn cursor-pointer select-none"
+            />
+          </div>
+          <h2 class="font-semibold mt-2 text-base sm:text-lg">
+            Ambulance Service
+          </h2>
+          <h3 class="text-base sm:text-lg text-gray-500">Ambulance</h3>
+          <p class="font-semibold mt-2 text-base sm:text-3xl">1994-999999</p>
+          <div
+            class="badge bg-base-300 p-4 my-5 text-sm sm:text-base text-gray-500"
+          >
+            Health
+          </div>
 
-        <div class="mt-3 flex flex-col sm:flex-row gap-2">
-            <button class="flex items-center justify-center gap-2 bg-white hover:bg-blue-100 border border-[#D4D6D5] text-gray-600 copyBtn py-2 px-2 rounded w-full" data-number="1994-999999">
-                <img src="assets/paste.png" alt="" class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6">Copy</button>
-            <button class="flex items-center justify-center gap-2 bg-[#00A63E] hover:bg-green-500 border border-[#D4D6D5] text-white callBtn py-2 px-2 rounded w-full" data-name="Ambulance Service" data-number="1994-999999">
-                <img src="assets/telephone.png" alt="" class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6">Call</button>
-        </div>
-
+          <div class="mt-3 flex flex-col sm:flex-row gap-2">
+            <button
+              class="flex items-center justify-center gap-2 bg-white hover:bg-blue-100 border border-[#D4D6D5] text-gray-600 copyBtn py-2 px-2 rounded w-full"
+              data-number="1994-999999"
+            >
+              <img
+                src="assets/paste.png"
+                alt=""
+                class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
+              />Copy
+            </button>
+            <button
+              class="flex items-center justify-center gap-2 bg-[#00A63E] hover:bg-green-500 border border-[#D4D6D5] text-white callBtn py-2 px-2 rounded w-full"
+              data-name="Ambulance Service"
+              data-number="1994-999999"
+            >
+              <img
+                src="assets/telephone.png"
+                alt=""
+                class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
+              />Call
+            </button>
+          </div>
         </div>
 
         <!-- card-5 -->
         <div class="card bg-base-100 shadow-xl p-8">
-            <div class="flex justify-between items-center">
-                <div class="bg-[#FFE3E2] rounded flex items-center justify-center p-2 sm:p-3 md:p-4">
-                    <!--  -->
-                    <img src="assets/mother.png" class="w-8 h-8 sm:w-5 sm:h-5 md:w-6 md:h-6" alt="">
-                </div>
-            <img src="assets/heart2.png" alt="" class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 heartBtn cursor-pointer select-none">
-        </div>
-        <h2 class="font-semibold mt-2 text-base sm:text-lg">Women & Child Helpline</h2>
-        <h3 class="text-base sm:text-lg text-gray-500">Women & Child Helpline</h3>
-        <p class="font-semibold mt-2 text-base sm:text-3xl">109</p>
-        <div class="badge bg-base-300 p-4 my-5 text-sm sm:text-base text-gray-500">Help</div>
+          <div class="flex justify-between items-center">
+            <div
+              class="bg-[#FFE3E2] rounded flex items-center justify-center p-2 sm:p-3 md:p-4"
+            >
+              <!--  -->
+              <img
+                src="assets/mother.png"
+                class="w-8 h-8 sm:w-5 sm:h-5 md:w-6 md:h-6"
+                alt=""
+              />
+            </div>
+            <img
+              src="assets/heart2.png"
+              alt=""
+              class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 heartBtn cursor-pointer select-none"
+            />
+          </div>
+          <h2 class="font-semibold mt-2 text-base sm:text-lg">
+            Women & Child Helpline
+          </h2>
+          <h3 class="text-base sm:text-lg text-gray-500">
+            Women & Child Helpline
+          </h3>
+          <p class="font-semibold mt-2 text-base sm:text-3xl">109</p>
+          <div
+            class="badge bg-base-300 p-4 my-5 text-sm sm:text-base text-gray-500"
+          >
+            Help
+          </div>
 
-        <div class="mt-3 flex flex-col sm:flex-row gap-2">
-            <button class="flex items-center justify-center gap-2 bg-white hover:bg-blue-100 border border-[#D4D6D5] text-gray-600 copyBtn py-2 px-2 rounded w-full" data-number="109">
-                <img src="assets/paste.png" alt="" class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6">Copy</button>
-            <button class="flex items-center justify-center gap-2 bg-[#00A63E] hover:bg-green-500 border border-[#D4D6D5] text-white callBtn py-2 px-2 rounded w-full" data-name="Women & Child Helpline" data-number="109">
-                <img src="assets/telephone.png" alt="" class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6">Call</button>
-        </div>
-
+          <div class="mt-3 flex flex-col sm:flex-row gap-2">
+            <button
+              class="flex items-center justify-center gap-2 bg-white hover:bg-blue-100 border border-[#D4D6D5] text-gray-600 copyBtn py-2 px-2 rounded w-full"
+              data-number="109"
+            >
+              <img
+                src="assets/paste.png"
+                alt=""
+                class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
+              />Copy
+            </button>
+            <button
+              class="flex items-center justify-center gap-2 bg-[#00A63E] hover:bg-green-500 border border-[#D4D6D5] text-white callBtn py-2 px-2 rounded w-full"
+              data-name="Women & Child Helpline"
+              data-number="109"
+            >
+              <img
+                src="assets/telephone.png"
+                alt=""
+                class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
+              />Call
+            </button>
+          </div>
         </div>
 
         <!-- card-6 -->
         <div class="card bg-base-100 shadow-xl p-8">
-            <div class="flex justify-between items-center">
-                <div class="bg-[#DFEFFF] rounded flex items-center justify-center p-2 sm:p-3 md:p-4">
-                    <img src="assets/corruption.png" class="w-8 h-8 sm:w-5 sm:h-5 md:w-6 md:h-6" alt="">
-                </div>
-            <img src="assets/heart2.png" alt="" class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 heartBtn cursor-pointer select-none">
-        </div>
-        <h2 class="font-semibold mt-2 text-base sm:text-lg">Anti-Corruption Helpline</h2>
-        <h3 class="text-base sm:text-lg text-gray-500">Anti-Corruption</h3>
-        <p class="font-semibold mt-2 text-base sm:text-3xl">106</p>
-        <div class="badge bg-base-300 p-4 my-5 text-sm sm:text-base text-gray-500">Govt.</div>
+          <div class="flex justify-between items-center">
+            <div
+              class="bg-[#DFEFFF] rounded flex items-center justify-center p-2 sm:p-3 md:p-4"
+            >
+              <img
+                src="assets/corruption.png"
+                class="w-8 h-8 sm:w-5 sm:h-5 md:w-6 md:h-6"
+                alt=""
+              />
+            </div>
+            <img
+              src="assets/heart2.png"
+              alt=""
+              class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 heartBtn cursor-pointer select-none"
+            />
+          </div>
+          <h2 class="font-semibold mt-2 text-base sm:text-lg">
+            Anti-Corruption Helpline
+          </h2>
+          <h3 class="text-base sm:text-lg text-gray-500">Anti-Corruption</h3>
+          <p class="font-semibold mt-2 text-base sm:text-3xl">106</p>
+          <div
+            class="badge bg-base-300 p-4 my-5 text-sm sm:text-base text-gray-500"
+          >
+            Govt.
+          </div>
 
-        <div class="mt-3 flex flex-col sm:flex-row gap-2">
-            <button class="flex items-center justify-center gap-2 bg-white hover:bg-blue-100 border border-[#D4D6D5] text-gray-600 copyBtn py-2 px-2 rounded w-full" data-number="106">
-                <img src="assets/paste.png" alt="" class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6">Copy</button>
-            <button class="flex items-center justify-center gap-2 bg-[#00A63E] hover:bg-green-500 border border-[#D4D6D5] text-white callBtn py-2 px-2 rounded w-full" data-name="Anti-Corruption Helpline" data-number="106">
-                <img src="assets/telephone.png" alt="" class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6">Call</button>
-        </div>
-
+          <div class="mt-3 flex flex-col sm:flex-row gap-2">
+            <button
+              class="flex items-center justify-center gap-2 bg-white hover:bg-blue-100 border border-[#D4D6D5] text-gray-600 copyBtn py-2 px-2 rounded w-full"
+              data-number="106"
+            >
+              <img
+                src="assets/paste.png"
+                alt=""
+                class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
+              />Copy
+            </button>
+            <button
+              class="flex items-center justify-center gap-2 bg-[#00A63E] hover:bg-green-500 border border-[#D4D6D5] text-white callBtn py-2 px-2 rounded w-full"
+              data-name="Anti-Corruption Helpline"
+              data-number="106"
+            >
+              <img
+                src="assets/telephone.png"
+                alt=""
+                class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
+              />Call
+            </button>
+          </div>
         </div>
 
         <!-- card-7 -->
         <div class="card bg-base-100 shadow-xl p-8">
-            <div class="flex justify-between items-center">
-                <div class="bg-[#FFE3E2] rounded flex items-center justify-center p-2 sm:p-3 md:p-4">
-                    <img src="assets/engineering.png" class="w-8 h-8 sm:w-5 sm:h-5 md:w-6 md:h-6" alt="">
-                </div>
-            <img src="assets/heart2.png" alt="" class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 heartBtn cursor-pointer select-none">
-        </div>
-        <h2 class="font-semibold mt-2 text-base sm:text-lg">Electricity Helpline</h2>
-        <h3 class="text-base sm:text-lg text-gray-500">Electricity Outage</h3>
-        <p class="font-semibold mt-2 text-base sm:text-3xl">16216</p>
-        <div class="badge bg-base-300 p-4 my-5 text-sm sm:text-base text-gray-500">Electricity</div>
+          <div class="flex justify-between items-center">
+            <div
+              class="bg-[#FFE3E2] rounded flex items-center justify-center p-2 sm:p-3 md:p-4"
+            >
+              <img
+                src="assets/engineering.png"
+                class="w-8 h-8 sm:w-5 sm:h-5 md:w-6 md:h-6"
+                alt=""
+              />
+            </div>
+            <img
+              src="assets/heart2.png"
+              alt=""
+              class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 heartBtn cursor-pointer select-none"
+            />
+          </div>
+          <h2 class="font-semibold mt-2 text-base sm:text-lg">
+            Electricity Helpline
+          </h2>
+          <h3 class="text-base sm:text-lg text-gray-500">Electricity Outage</h3>
+          <p class="font-semibold mt-2 text-base sm:text-3xl">16216</p>
+          <div
+            class="badge bg-base-300 p-4 my-5 text-sm sm:text-base text-gray-500"
+          >
+            Electricity
+          </div>
 
-        <div class="mt-3 flex flex-col sm:flex-row gap-2">
-            <button class="flex items-center justify-center gap-2 bg-white hover:bg-blue-100 border border-[#D4D6D5] text-gray-600 copyBtn py-2 px-2 rounded w-full" data-number="16216">
-                <img src="assets/paste.png" alt="" class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6">Copy</button>
-            <button class="flex items-center justify-center gap-2 bg-[#00A63E] hover:bg-green-500 border border-[#D4D6D5] text-white callBtn py-2 px-2 rounded w-full" data-name="Electricity Helpline" data-number="16216">
-                <img src="assets/telephone.png" alt="" class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6">Call</button>
-        </div>
-
+          <div class="mt-3 flex flex-col sm:flex-row gap-2">
+            <button
+              class="flex items-center justify-center gap-2 bg-white hover:bg-blue-100 border border-[#D4D6D5] text-gray-600 copyBtn py-2 px-2 rounded w-full"
+              data-number="16216"
+            >
+              <img
+                src="assets/paste.png"
+                alt=""
+                class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
+              />Copy
+            </button>
+            <button
+              class="flex items-center justify-center gap-2 bg-[#00A63E] hover:bg-green-500 border border-[#D4D6D5] text-white callBtn py-2 px-2 rounded w-full"
+              data-name="Electricity Helpline"
+              data-number="16216"
+            >
+              <img
+                src="assets/telephone.png"
+                alt=""
+                class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
+              />Call
+            </button>
+          </div>
         </div>
 
         <!-- card-8 -->
         <div class="card bg-base-100 shadow-xl p-8">
-            <div class="flex justify-between items-center">
-                <div class="bg-[#DFEFFF] rounded flex items-center justify-center p-2 sm:p-3 md:p-4">
-                    <img src="assets/brac.png" class="w-8 h-8 sm:w-5 sm:h-5 md:w-6 md:h-6" alt="">
-                </div>
-            <img src="assets/heart2.png" alt="" class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 heartBtn cursor-pointer select-none">
-        </div>
-        <h2 class="font-semibold mt-2 text-base sm:text-lg">Brac Helpline</h2>
-        <h3 class="text-base sm:text-lg text-gray-500">Brac</h3>
-        <p class="font-semibold mt-2 text-base sm:text-3xl">16445</p>
-        <div class="badge bg-base-300 p-4 my-5 text-sm sm:text-base text-gray-500">NGO</div>
+          <div class="flex justify-between items-center">
+            <div
+              class="bg-[#DFEFFF] rounded flex items-center justify-center p-2 sm:p-3 md:p-4"
+            >
+              <img
+                src="assets/brac.png"
+                class="w-8 h-8 sm:w-5 sm:h-5 md:w-6 md:h-6"
+                alt=""
+              />
+            </div>
+            <img
+              src="assets/heart2.png"
+              alt=""
+              class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 heartBtn cursor-pointer select-none"
+            />
+          </div>
+          <h2 class="font-semibold mt-2 text-base sm:text-lg">Brac Helpline</h2>
+          <h3 class="text-base sm:text-lg text-gray-500">Brac</h3>
+          <p class="font-semibold mt-2 text-base sm:text-3xl">16445</p>
+          <div
+            class="badge bg-base-300 p-4 my-5 text-sm sm:text-base text-gray-500"
+          >
+            NGO
+          </div>
 
-        <div class="mt-3 flex flex-col sm:flex-row gap-2">
-            <button class="flex items-center justify-center gap-2 bg-white hover:bg-blue-100 border border-[#D4D6D5] text-gray-600 copyBtn py-2 px-2 rounded w-full" data-number="16445">
-                <img src="assets/paste.png" alt="" class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6">Copy</button>
-            <button class="flex items-center justify-center gap-2 bg-[#00A63E] hover:bg-green-500 border border-[#D4D6D5] text-white callBtn py-2 px-2 rounded w-full" data-name="Brac Helpline" data-number="16445">
-                <img src="assets/telephone.png" alt="" class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6">Call</button>
-        </div>
-
+          <div class="mt-3 flex flex-col sm:flex-row gap-2">
+            <button
+              class="flex items-center justify-center gap-2 bg-white hover:bg-blue-100 border border-[#D4D6D5] text-gray-600 copyBtn py-2 px-2 rounded w-full"
+              data-number="16445"
+            >
+              <img
+                src="assets/paste.png"
+                alt=""
+                class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
+              />Copy
+            </button>
+            <button
+              class="flex items-center justify-center gap-2 bg-[#00A63E] hover:bg-green-500 border border-[#D4D6D5] text-white callBtn py-2 px-2 rounded w-full"
+              data-name="Brac Helpline"
+              data-number="16445"
+            >
+              <img
+                src="assets/telephone.png"
+                alt=""
+                class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
+              />Call
+            </button>
+          </div>
         </div>
 
         <!-- card-9 -->
         <div class="card bg-base-100 shadow-xl p-8">
-            <div class="flex justify-between items-center">
-                <div class="bg-[#FFE3E2] rounded flex items-center justify-center p-2 sm:p-3 md:p-4">
-                    <img src="assets/Bangladesh-Railway.png" class="w-8 h-8 sm:w-5 sm:h-5 md:w-6 md:h-6" alt="">
-                </div>
-            <img src="assets/heart2.png" alt="" class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 heartBtn cursor-pointer select-none">
-        </div>
-        <h2 class="font-semibold mt-2 text-base sm:text-lg">Bangladesh Railway Helpline</h2>
-        <h3 class="text-base sm:text-lg text-gray-500">Bangladesh Railway</h3>
-        <p class="font-semibold mt-2 text-base sm:text-3xl">163</p>
-        <div class="badge bg-base-300 p-4 my-5 text-sm sm:text-base text-gray-500">Travel</div>
+          <div class="flex justify-between items-center">
+            <div
+              class="bg-[#FFE3E2] rounded flex items-center justify-center p-2 sm:p-3 md:p-4"
+            >
+              <img
+                src="assets/Bangladesh-Railway.png"
+                class="w-8 h-8 sm:w-5 sm:h-5 md:w-6 md:h-6"
+                alt=""
+              />
+            </div>
+            <img
+              src="assets/heart2.png"
+              alt=""
+              class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 heartBtn cursor-pointer select-none"
+            />
+          </div>
+          <h2 class="font-semibold mt-2 text-base sm:text-lg">
+            Bangladesh Railway Helpline
+          </h2>
+          <h3 class="text-base sm:text-lg text-gray-500">Bangladesh Railway</h3>
+          <p class="font-semibold mt-2 text-base sm:text-3xl">163</p>
+          <div
+            class="badge bg-base-300 p-4 my-5 text-sm sm:text-base text-gray-500"
+          >
+            Travel
+          </div>
 
-        <div class="mt-3 flex flex-col sm:flex-row gap-2">
-            <button class="flex items-center justify-center gap-2 bg-white hover:bg-blue-100 border border-[#D4D6D5] text-gray-600 copyBtn py-2 px-2 rounded w-full" data-number="163">
-                <img src="assets/paste.png" alt="" class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6">Copy</button>
-            <button class="flex items-center justify-center gap-2 bg-[#00A63E] hover:bg-green-500 border border-[#D4D6D5] text-white callBtn py-2 px-2 rounded w-full" data-name="Bangladesh Railway Helpline" data-number="163">
-                <img src="assets/telephone.png" alt="" class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6">Call</button>
+          <div class="mt-3 flex flex-col sm:flex-row gap-2">
+            <button
+              class="flex items-center justify-center gap-2 bg-white hover:bg-blue-100 border border-[#D4D6D5] text-gray-600 copyBtn py-2 px-2 rounded w-full"
+              data-number="163"
+            >
+              <img
+                src="assets/paste.png"
+                alt=""
+                class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
+              />Copy
+            </button>
+            <button
+              class="flex items-center justify-center gap-2 bg-[#00A63E] hover:bg-green-500 border border-[#D4D6D5] text-white callBtn py-2 px-2 rounded w-full"
+              data-name="Bangladesh Railway Helpline"
+              data-number="163"
+            >
+              <img
+                src="assets/telephone.png"
+                alt=""
+                class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
+              />Call
+            </button>
+          </div>
         </div>
-
-        </div>
-
-        </div>
+      </div>
 
       <!-- History Section -->
-    <div class="md:col-span-3">
-      <div class="card bg-white shadow-xl p-4 flex flex-col h-full">
-        <div class="flex justify-between items-center mb-3">
+      <div class="md:col-span-3">
+        <div class="card bg-white shadow-xl p-4 flex flex-col h-full">
+          <div class="flex justify-between items-center mb-3">
             <div class="flex items-center gap-2">
-                <img src="assets/clock.png" alt="" class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6">
-          <h2 class="text-lg font-bold">Call History</h2>
+              <img
+                src="assets/clock.png"
+                alt=""
+                class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
+              />
+              <h2 class="text-lg font-bold">Call History</h2>
             </div>
-          <button id="clearHistory" class="btn bg-[#00A63E] text-white btn-sm rounded-full">Clear</button>
+            <button
+              id="clearHistory"
+              class="btn bg-[#00A63E] text-white btn-sm rounded-full"
+            >
+              Clear
+            </button>
+          </div>
+          <ul
+            id="historyList"
+            class="mt-3 space-y-2 text-sm text-gray-700"
+          ></ul>
         </div>
-        <ul id="historyList" class="mt-3 space-y-2 text-sm text-gray-700"></ul>
       </div>
-    </div>
-</section>
+    </main>
 
-  <!-- JavaScript -->
-  <script>
-    const heartBtns = document.querySelectorAll(".heartBtn");
-    const copyBtns = document.querySelectorAll(".copyBtn");
-    const callBtns = document.querySelectorAll(".callBtn");
-    const historyList = document.getElementById("historyList");
-    const clearHistory = document.getElementById("clearHistory");
+    <!-- JavaScript -->
+    <script>
+      const heartBtns = document.querySelectorAll(".heartBtn");
+      const copyBtns = document.querySelectorAll(".copyBtn");
+      const callBtns = document.querySelectorAll(".callBtn");
+      const historyList = document.getElementById("historyList");
+      const clearHistory = document.getElementById("clearHistory");
 
-    let heartCount = 0;
-    let coinCount = 100;
-    let copyCount = 0;
+      let heartCount = 0;
+      let coinCount = 100;
+      let copyCount = 0;
 
-    const heartCountEl = document.getElementById("heartCount");
-    const coinCountEl = document.getElementById("coinCount");
-    const copyCountEl = document.getElementById("copyCount");
+      const heartCountEl = document.getElementById("heartCount");
+      const coinCountEl = document.getElementById("coinCount");
+      const copyCountEl = document.getElementById("copyCount");
 
-    // Heart Button
-    heartBtns.forEach(btn => {
-      btn.addEventListener("click", () => {
-        heartCount++;
-        heartCountEl.textContent = heartCount;
+      // Heart Button
+      heartBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          heartCount++;
+          heartCountEl.textContent = heartCount;
+        });
       });
-    });
 
-    // Copy Button
-    copyBtns.forEach(btn => {
-      btn.addEventListener("click", () => {
-        navigator.clipboard.writeText(btn.dataset.number);
-        copyCount++;
-        copyCountEl.textContent = copyCount;
-        alert("Number copied: " + btn.dataset.number);
+      // Copy Button
+      copyBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          navigator.clipboard.writeText(btn.dataset.number);
+          copyCount++;
+          copyCountEl.textContent = copyCount;
+          alert("Number copied: " + btn.dataset.number);
+        });
       });
-    });
 
-    // Call Button
-    callBtns.forEach(btn => {
-  btn.addEventListener("click", () => {
-    if (coinCount < 20) {
-      alert("❌ Not enough coins! Each call costs 20 coins.");
-      return;
-    }
-    coinCount -= 20;
-    coinCountEl.textContent = coinCount;
+      // Call Button
+      callBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          if (coinCount < 20) {
+            alert("❌ Not enough coins! Each call costs 20 coins.");
+            return;
+          }
+          coinCount -= 20;
+          coinCountEl.textContent = coinCount;
 
-    alert(`📞 Calling ${btn.dataset.name} ${btn.dataset.number}...`);
+          alert(`📞 Calling ${btn.dataset.name} ${btn.dataset.number}...`);
 
-    const li = document.createElement("li");
-    const time = new Date().toLocaleTimeString();
+          const li = document.createElement("li");
+          const time = new Date().toLocaleTimeString();
 
-    li.innerHTML = `
+          li.innerHTML = `
       <div class="flex justify-between items-center w-full bg-base-100 p-2 shadow-sm rounded">
         <div class="flex flex-col">
           <h3 class="font-semibold text-sm">${btn.dataset.name}</h3>
@@ -315,15 +603,14 @@
       </div>
     `;
 
-    historyList.append(li);
-  });
-});
+          historyList.append(li);
+        });
+      });
 
-    // Clear History
-    clearHistory.addEventListener("click", () => {
-      historyList.innerHTML = "";
-    });
-  </script>
-
-</body>
+      // Clear History
+      clearHistory.addEventListener("click", () => {
+        historyList.innerHTML = "";
+      });
+    </script>
+  </body>
 </html>
