@@ -1,6 +1,6 @@
 ## Create Readme
 
-### 6. Answer the following questions clearly:
+### Answer the following questions clearly:
 
 1. What is the difference between **getElementById, getElementsByClassName, and querySelector, querySelectorAll**?
 - **getElementById:** is used to selecting a single element using its unique id.
