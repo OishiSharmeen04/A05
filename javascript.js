@@ -13,12 +13,23 @@ const coinCountEl = document.getElementById("coinCount");
 const copyCountEl = document.getElementById("copyCount");
 
 // Heart Button
-heartBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    heartCount++;
-    heartCountEl.textContent = heartCount;
-  });
-});
+    heartBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const img = btn.querySelector("img");
+
+        // যদি empty থাকে → filled + count++
+        if (img.src.includes("assets/heart2.png")) {
+          img.src = "assets/heart.png";
+          heartCount++;
+          heartCountEl.textContent = heartCount;
+
+          // Auto-revert after 0.15s WITHOUT decreasing count
+          setTimeout(() => {
+            img.src = "assets/heart2.png";
+          }, 150);
+        }
+      });
+    });
 
 // Copy Button
 copyBtns.forEach((btn) => {
