@@ -627,7 +627,7 @@ callBtns.forEach(function(btn) {
     const time = new Date().toLocaleTimeString();
 
     li.innerHTML = "<div class='flex justify-between items-center w-full bg-base-100 p-2 shadow-sm rounded'>" + 
-      "< class='flex flex-col'>" + "<h3 class='font-semibold text-sm'>" + btn.dataset.name + "</h3>" + 
+      "<div class='flex flex-col'>" + "<h3 class='font-semibold text-sm'>" + btn.dataset.name + "</h3>" + 
       "<p class='text-gray-500 text-xs'>" + btn.dataset.number + "</p>" + 
       "</div>" +
       "<span class='text-xs text-gray-400'>" + time + "</span>" +
