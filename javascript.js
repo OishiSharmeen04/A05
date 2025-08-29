@@ -13,8 +13,8 @@ const coinCountEl = document.getElementById("coinCount");
 const copyCountEl = document.getElementById("copyCount");
 
 // Heart Button
-heartBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
+heartBtns.forEach(function(btn)) {
+  btn.addEventListener("click", function(e) {
     heartCount++;
     heartCountEl.textContent = heartCount;
   });
