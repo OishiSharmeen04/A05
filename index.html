@@ -585,16 +585,25 @@ const coinCountEl = document.getElementById("coinCount");
 const copyCountEl = document.getElementById("copyCount");
 
 // Heart Button
-heartBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    heartCount++;
-    heartCountEl.textContent = heartCount;
-  });
-});
+heartBtns.forEach(function(btn) {
+      btn.addEventListener("click", function(e) {
+        const img = btn.querySelector("img");
+
+        if (img.src.includes("assets/heart2.png")) {
+          img.src = "assets/heart.png";
+          heartCount++;
+          heartCountEl.textContent = heartCount;
+
+          setTimeout(function(e) {
+            img.src = "assets/heart2.png";
+          }, 150);
+        }
+      });
+    });
 
 // Copy Button
-copyBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
+copyBtns.forEach(function(btn) {
+  btn.addEventListener("click", function(e) {
     navigator.clipboard.writeText(btn.dataset.number);
     copyCount++;
     copyCountEl.textContent = copyCount;
@@ -603,8 +612,8 @@ copyBtns.forEach((btn) => {
 });
 
 // Call Button
-callBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
+callBtns.forEach(function(btn) {
+  btn.addEventListener("click", function(e) {
     if (coinCount < 20) {
       alert("❌ Not enough coins! Each call costs 20 coins.");
       return;
@@ -632,7 +641,7 @@ callBtns.forEach((btn) => {
 });
 
 // Clear History
-clearHistory.addEventListener("click", () => {
+clearHistory.addEventListener("click", function(e) {
   historyList.innerHTML = "";
 });
 
