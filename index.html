@@ -621,7 +621,7 @@ callBtns.forEach(function(btn) {
     coinCount -= 20;
     coinCountEl.textContent = coinCount;
 
-    alert(`📞 Calling ${btn.dataset.name} ${btn.dataset.number}...`);
+    alert("📞 Calling " + btn.dataset.name +" " + btn.dataset.number + "...");
 
     const li = document.createElement("li");
     const time = new Date().toLocaleTimeString();
